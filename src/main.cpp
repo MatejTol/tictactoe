@@ -1,5 +1,10 @@
 #include <SFML/Graphics.hpp>
 
+#include "user_interface/events.hpp"
+#include "graphics/draw_grid.hpp"
+
+Input input;
+
 int main()
 {
     auto window = sf::RenderWindow(sf::VideoMode({1920u, 1080u}), "CMake SFML Project");
@@ -7,15 +12,10 @@ int main()
 
     while (window.isOpen())
     {
-        while (const std::optional event = window.pollEvent())
-        {
-            if (event->is<sf::Event::Closed>())
-            {
-                window.close();
-            }
-        }
+        processEvents(window, input);
 
         window.clear();
+        draw_grid(window, 2, 2);
         window.display();
     }
 }
