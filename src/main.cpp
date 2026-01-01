@@ -2,7 +2,10 @@
 
 #include "user_interface/events.hpp"
 #include "graphics/draw_grid.hpp"
+#include "graphics/draw_cross.hpp"
+
 #include "config.hpp"
+
 
 Input input;
 
@@ -17,6 +20,7 @@ int main()
 
         window.clear();
         draw_grid(window);
+        draw_cross(window, sf::Vector2f(250, 380));
         window.display();
     }
 }
