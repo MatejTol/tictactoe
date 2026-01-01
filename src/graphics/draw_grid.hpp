@@ -2,4 +2,4 @@
 
 #include <SFML/Graphics.hpp>
 
-void draw_grid(sf::RenderWindow&, int, int);
+void draw_grid(sf::RenderWindow&);
