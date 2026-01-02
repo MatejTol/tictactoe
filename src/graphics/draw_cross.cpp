@@ -16,7 +16,6 @@ void draw_cross(sf::RenderWindow& window, sf::Vector2f position)
         position + sf::Vector2f(+cfg::cross_radius, -cfg::cross_radius),
         position + sf::Vector2f(-cfg::cross_radius, +cfg::cross_radius)
     );
-    
 }
 
 
