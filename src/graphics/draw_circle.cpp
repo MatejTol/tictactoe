@@ -4,12 +4,12 @@
 
 void draw_circle(sf::RenderWindow& window, sf::Vector2f position)
 {
-    sf::CircleShape shape(50.f);
+    sf::CircleShape shape(cfg::circle_radius);
 
-    shape.setFillColor(sf::Color(150, 50, 250));
+    shape.setFillColor(sf::Color::Black);
 
-    shape.setOutlineThickness(10.f);
-    shape.setOutlineColor(sf::Color(250, 150, 100));
+    shape.setOutlineThickness(cfg::circle_radius/20.0f);
+    shape.setOutlineColor(sf::Color::White);
 
     shape.setPosition(position);
 

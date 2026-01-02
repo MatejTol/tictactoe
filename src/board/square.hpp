@@ -36,15 +36,14 @@ public:
 
     void drawContent(sf::RenderWindow& window)
     {
-        if (state == empty)
-        {
+        if (state == empty) 
             return;
-        }
-
+        
         if (state == circle)
-        {
             draw_circle(window, column, row);
-        }
+
+        if (state == cross)
+            draw_cross(window, column, row);
 
     }
 
